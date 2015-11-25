@@ -8,6 +8,7 @@
  */
 
 (function ($) {
+	"use strict";
 	var promises = {}, queue = [];
 	
 	function createElement(tag, attr) {
@@ -50,8 +51,8 @@
 	};
 	
 	function _getPromise(file) {
-		var type = 'js';
-		if ((pos = file.indexOf('!')) != -1) {
+		var type = 'js', pos = file.indexOf('!');
+		if (pos != -1) {
 			type = file.substring(0, pos);
 			file = file.substring(pos + 1);
 		} else if (file.indexOf('.css') != -1) {
