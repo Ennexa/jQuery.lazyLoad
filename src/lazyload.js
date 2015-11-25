@@ -7,6 +7,7 @@
  * @version 2.0
  */
 
+/*! http://git.io/lazyLoad | © Ennexa Technologies | http://www.ennexa.com/ */
 (function ($) {
 	"use strict";
 	var promises = {}, queue = [];
